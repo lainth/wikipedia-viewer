@@ -19,7 +19,12 @@ const RandomArticle = styled.div `
 export default class RandomWiki extends React.Component {
     render() {
         return (
-            <RandomArticle as="a" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</RandomArticle>
+            <RandomArticle 
+                as="a" 
+                href="https://en.wikipedia.org/wiki/Special:Random" 
+                target="_blank">
+                Click here for a random article
+            </RandomArticle>
         );
     }
 }
