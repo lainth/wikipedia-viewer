@@ -22,20 +22,47 @@ const StyledIcon = styled.span `
 `;
 
 const StyledInput = styled.input`
+    display: none;
     margin: auto;
     border: 3px solid orange;
     background-color: transparent;
     border-radius: 25px;
+    color: white;
+    padding: 0px .5em;
+
+    &:focus {
+        outline: 5px white;
+    } 
 `;
 
 export default class SearchArticle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            displayIcon: "inline",
+            displayInput: "none"
+        }
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState({
+            displayIcon: "none",
+            displayInput: "block"
+        })
+    }
+
     render() {
         return (
             <InputDiv>
                 <StyledIcon>
-                    <FontAwesomeIcon icon={faSearch} />
+                    <FontAwesomeIcon 
+                        icon={faSearch} 
+                        onClick={this.handleClick}
+                        style={{display: this.state.displayIcon}} />
                 </StyledIcon>
-                {/*<StyledInput />*/}
+                <StyledInput type="text" style={{display: this.state.displayInput}} />
                 <StyledParagraph>Click icon to search</StyledParagraph>
             </InputDiv>
         );
