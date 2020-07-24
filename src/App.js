@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import RandomWiki from './components/random';
+import SearchArticle from './components/searcharticle';
 
 const StyledRow = styled(Row) `
   height: 100vh !important;
@@ -21,6 +22,7 @@ export default class App extends React.Component {
         <StyledRow>
           <Col>
             <RandomWiki />
+            <SearchArticle />
           </Col>
         </StyledRow>
       </Container>
