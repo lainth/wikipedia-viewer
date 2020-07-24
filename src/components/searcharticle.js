@@ -24,11 +24,11 @@ const StyledIcon = styled.span `
 const StyledInput = styled.input`
     display: none;
     margin: auto;
-    border: 3px solid orange;
+    border: 4px solid orange;
     background-color: transparent;
     border-radius: 25px;
     color: white;
-    padding: 0px .5em;
+    padding: 3px 1em;
 
     &:focus {
         outline: 5px white;
