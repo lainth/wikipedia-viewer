@@ -1,10 +1,31 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import './App.scss';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-const App = () => {
-  return (
-    <div>INIT</div>
-  );
+import RandomWiki from './components/random';
+import SearchArticle from './components/searcharticle';
+
+const StyledRow = styled(Row) `
+  height: 100vh !important;
+  align-items: center !important; 
+  justify-content: center !important;
+`;
+
+
+export default class App extends React.Component {
+  render () {
+    return (
+      <Container>
+        <StyledRow>
+          <Col>
+            <RandomWiki />
+            <SearchArticle />
+          </Col>
+        </StyledRow>
+      </Container>
+      );
+  }
 }
-export default App;
