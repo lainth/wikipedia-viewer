@@ -17,6 +17,7 @@ const ArticleDiv = styled.div `
     background-color: grey;
     border: 1px solid white;
     margin-bottom: 1em;
+    padding: .5em 1em;
 `;
 
 const StyledParagraph = styled.p `
